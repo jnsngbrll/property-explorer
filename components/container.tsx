@@ -10,7 +10,7 @@ type Props = {
 export const Container = ({ children, className }: Props) => {
   return (
     <SafeAreaView
-      className={cn('p-4 flex-1 bg-gray-100 dark:bg-neutral-900', className)}
+      className={cn('p-4 bg-gray-100 dark:bg-neutral-900', className)}
     >
       {children}
     </SafeAreaView>
