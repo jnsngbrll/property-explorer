@@ -1,12 +1,15 @@
 import { useMemo, useState } from 'react';
 
+import { properties } from '@/constants/properties';
+
 import { Container } from '@/components/container';
 import { PropertyList } from '@/components/property-list';
+import { PropertyTypes } from '@/components/property-types';
 import { SearchBar } from '@/components/search-bar';
-import { properties } from '@/constants/properties';
 
 export default function Home() {
   const [searchInput, setSearchInput] = useState('');
+  const [selectedType, setSelectedType] = useState('All');
 
   // Filter the list of properties by title and location
   const filteredProperties = useMemo(() => {
@@ -20,12 +23,21 @@ export default function Home() {
       );
     }
 
+    if (selectedType !== 'All') {
+      result = result.filter((r) => r.type === selectedType);
+    }
+
     return result;
-  }, [searchInput]);
+  }, [searchInput, selectedType]);
 
   return (
     <Container className="gap-y-4">
       <SearchBar value={searchInput} onChange={setSearchInput} />
+      <PropertyTypes
+        data={properties}
+        selectedType={selectedType}
+        setSelectedType={setSelectedType}
+      />
       <PropertyList data={filteredProperties} />
     </Container>
   );

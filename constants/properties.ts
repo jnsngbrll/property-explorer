@@ -43,7 +43,7 @@ export const properties = [
     title: 'Modern House in the City',
     location: 'Makati, Metro Manila',
     price: 8500000,
-    type: 'House',
+    type: 'House 1',
     description:
       'A beautiful modern house with three bedrooms, two bathrooms, and a spacious garage.',
     address: '123 Ayala Ave, Makati, Metro Manila',
@@ -56,7 +56,7 @@ export const properties = [
     title: 'Cozy Condo with City View',
     location: 'BGC, Taguig',
     price: 4500000,
-    type: 'Condo',
+    type: 'Condo 1',
     description:
       'A stylish one-bedroom condo with a great city view, perfect for young professionals.',
     address: '456 High Street, BGC, Taguig',
@@ -69,7 +69,7 @@ export const properties = [
     title: 'Affordable Apartment Near MRT',
     location: 'Quezon City',
     price: 2500000,
-    type: 'Apartment',
+    type: 'Apartment 1',
     description:
       'An affordable apartment with two bedrooms, ideal for small families.',
     address: '789 EDSA, Quezon City',
