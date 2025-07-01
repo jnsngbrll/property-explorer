@@ -2,7 +2,7 @@ import { Tabs } from 'expo-router';
 import { Platform } from 'react-native';
 
 import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
+import { TabIcon } from '@/components/ui/tab-icon';
 
 import { useFavorites } from '@/hooks/use-favorites';
 
@@ -30,8 +30,12 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="house.fill" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              name={focused ? 'home' : 'home-outline'}
+              color={color}
+              focuses={focused}
+            />
           ),
         }}
       />
@@ -39,8 +43,12 @@ export default function TabLayout() {
         name="favorites"
         options={{
           title: 'Favorites',
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="heart.fill" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              name={focused ? 'heart' : 'heart-outline'}
+              color={color}
+              focuses={focused}
+            />
           ),
           tabBarBadge: favorites.length > 0 ? favorites.length : undefined,
         }}
@@ -49,8 +57,12 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => (
-            <IconSymbol size={28} name="account.fill" color={color} />
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              name={focused ? 'person' : 'person-outline'}
+              color={color}
+              focuses={focused}
+            />
           ),
         }}
       />
