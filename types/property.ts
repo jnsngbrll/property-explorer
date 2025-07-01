@@ -8,4 +8,7 @@ export type tProperty = {
   address?: string;
   amenities?: string[];
   image: string;
+  guestCount: number;
+  bedCount: number;
+  bathCount: number;
 };
