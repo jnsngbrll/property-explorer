@@ -1,4 +1,4 @@
-import { FlatList, View } from 'react-native';
+import { FlatList } from 'react-native';
 
 import type { tProperty } from '@/types/property';
 
@@ -13,7 +13,8 @@ export const PropertyList = ({ data }: Props) => {
     <FlatList
       data={data}
       renderItem={({ item }) => <PropertyCard key={item.id} data={item} />}
-      ItemSeparatorComponent={() => <View className="h-8" />}
+      showsVerticalScrollIndicator={false}
+      className="h-full"
     />
   );
 };
