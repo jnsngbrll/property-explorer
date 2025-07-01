@@ -11,9 +11,9 @@ export const Button = ({ title, variant = 'default', onPress }: Props) => {
     return (
       <TouchableOpacity
         onPress={onPress}
-        className="h-12 bg-white border border-white px-4 items-center justify-center rounded-xl"
+        className="h-12 bg-white dark:bg-accent-default px-4 items-center justify-center rounded-xl"
       >
-        <Text className="font-medium text-black">{title}</Text>
+        <Text className="font-medium text-black dark:text-white">{title}</Text>
       </TouchableOpacity>
     );
   }

@@ -10,6 +10,7 @@ import { Label } from '@/components/ui/label';
 import { Title } from '@/components/ui/title';
 
 import { useFavorites } from '@/hooks/use-favorites';
+import { useTheme } from '@/hooks/use-theme';
 
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Octicons from '@expo/vector-icons/Octicons';
@@ -20,27 +21,35 @@ type PropertyInfoCardProps = {
   title: string;
   value: number;
   iconName: IoniconName;
+  isDarkMode: boolean;
 };
 
 const PropertyInfoCard = ({
   title,
   value,
   iconName,
+  isDarkMode,
 }: PropertyInfoCardProps) => {
   return (
-    <View className="p-4 bg-white rounded-xl">
-      <MaterialCommunityIcons name={iconName} size={24} color="black" />
+    <View className="p-4 bg-white dark:bg-accent-default rounded-xl">
+      <MaterialCommunityIcons
+        name={iconName}
+        size={24}
+        color={isDarkMode ? 'white' : 'dark'}
+      />
       <Label title={title} />
-      <Text className="font-medium">{value}</Text>
+      <Text className="font-medium text-black dark:text-white">{value}</Text>
     </View>
   );
 };
 
 export default function DetailScreen() {
+  const { theme } = useTheme();
   const { id } = useLocalSearchParams();
   const { addFavorite, removeFavorite, isFavorite } = useFavorites();
 
   const data = getProperty(id);
+  const isDarkMode = theme === 'dark';
   const isItemFavorite = isFavorite(data?.id ?? '');
 
   if (!data) return null;
@@ -66,13 +75,17 @@ export default function DetailScreen() {
 
         <TouchableOpacity
           onPress={() => router.back()}
-          className="absolute top-12 left-4 p-2 bg-white rounded-full"
+          className="absolute top-12 left-4 p-2 bg-white dark:bg-accent-default rounded-full"
         >
-          <MaterialCommunityIcons name="arrow-left" size={20} color="black" />
+          <MaterialCommunityIcons
+            name="arrow-left"
+            size={20}
+            color={isDarkMode ? 'white' : 'black'}
+          />
         </TouchableOpacity>
         <TouchableOpacity
           onPress={toggleFavorite}
-          className="absolute top-12 right-4 p-2 bg-white rounded-full"
+          className="absolute top-12 right-4 p-2 bg-white dark:bg-accent-default rounded-full"
         >
           {isItemFavorite ? (
             <MaterialCommunityIcons name="heart" size={20} color="red" />
@@ -80,7 +93,7 @@ export default function DetailScreen() {
             <MaterialCommunityIcons
               name="heart-outline"
               size={20}
-              color="black"
+              color={isDarkMode ? 'white' : 'black'}
             />
           )}
         </TouchableOpacity>
@@ -102,16 +115,19 @@ export default function DetailScreen() {
               title="Guest"
               value={data.guestCount}
               iconName="account-supervisor-outline"
+              isDarkMode={isDarkMode}
             />
             <PropertyInfoCard
               title="Bed"
               value={data.bedCount}
               iconName="bed-king-outline"
+              isDarkMode={isDarkMode}
             />
             <PropertyInfoCard
               title="Bathroom"
               value={data.bathCount}
               iconName="shower"
+              isDarkMode={isDarkMode}
             />
           </Grid>
 
@@ -126,7 +142,7 @@ export default function DetailScreen() {
               {data.amenities?.map((amenity) => (
                 <View
                   key={amenity}
-                  className="py-2 px-4 bg-white rounded-full flex-row items-center gap-x-2"
+                  className="py-2 px-4 bg-white dark:bg-accent-default rounded-full flex-row items-center gap-x-2"
                 >
                   {getAminityIcon(amenity)}
                   <Text className="text-secondary-200">{amenity}</Text>
