@@ -16,7 +16,7 @@ export const SearchBar = ({ value, onChange }: Props) => {
       <Feather
         name="search"
         size={18}
-        color={isFocused ? '#60a5fa' : '#808080'}
+        color={isFocused ? '#3b82f6' : '#808080'}
         className="absolute left-2 z-10"
       />
       <TextInput

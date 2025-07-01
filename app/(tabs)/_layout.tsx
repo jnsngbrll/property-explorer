@@ -14,7 +14,7 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarButton: HapticTab,
-        tabBarActiveTintColor: '#60a5fa',
+        tabBarActiveTintColor: '#3b82f6',
         tabBarInactiveTintColor: '#808080',
         tabBarHideOnKeyboard: true,
         animation: 'shift',
@@ -60,6 +60,19 @@ export default function TabLayout() {
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               name={focused ? 'person' : 'person-outline'}
+              color={color}
+              focuses={focused}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              name={focused ? 'settings' : 'settings-outline'}
               color={color}
               focuses={focused}
             />

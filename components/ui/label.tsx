@@ -8,5 +8,11 @@ type Props = {
 };
 
 export const Label = ({ title, className }: Props) => {
-  return <Text className={cn('mb-2 font-medium', className)}>{title}</Text>;
+  return (
+    <Text
+      className={cn('mb-2 font-medium text-black dark:text-white', className)}
+    >
+      {title}
+    </Text>
+  );
 };
