@@ -7,9 +7,11 @@ import { HapticTab } from '@/components/haptic-tab';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
+import { useFavorites } from '@/hooks/use-favorites';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const { favorites } = useFavorites();
 
   return (
     <Tabs
@@ -41,6 +43,7 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => (
             <IconSymbol size={28} name="heart.fill" color={color} />
           ),
+          tabBarBadge: favorites.length > 0 ? favorites.length : undefined,
         }}
       />
       <Tabs.Screen

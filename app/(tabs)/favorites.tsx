@@ -1,11 +1,16 @@
-import { Text } from 'react-native';
+import { FavoriteList } from '@/components/favorite-list';
+import { Container } from '@/components/ui/container';
+import { Header } from '@/components/ui/header';
 
-import { Container } from '@/components/container';
+import { useFavorites } from '@/hooks/use-favorites';
 
 export default function Favorites() {
+  const { favorites } = useFavorites();
+
   return (
     <Container>
-      <Text className="text-black dark:text-white">Favorites</Text>
+      <Header title="Favorites" />
+      <FavoriteList data={favorites} />
     </Container>
   );
 }

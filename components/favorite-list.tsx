@@ -8,7 +8,7 @@ type Props = {
   data: tProperty[];
 };
 
-export const PropertyList = ({ data }: Props) => {
+export const FavoriteList = ({ data }: Props) => {
   return (
     <FlatList
       data={data}
