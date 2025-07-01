@@ -13,15 +13,21 @@ import { SearchBar } from '@/components/search-bar';
 import { Container } from '@/components/ui/container';
 import { Grid } from '@/components/ui/grid';
 import { Label } from '@/components/ui/label';
+import { Title } from '@/components/ui/title';
+
+import { useTheme } from '@/hooks/use-theme';
 
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function Home() {
+  const { theme } = useTheme();
+
   const [minPrice, setMinPrice] = useState(0);
-  const [maxPrice, setMaxPrice] = useState(8500000);
+  const [maxPrice, setMaxPrice] = useState(50000);
   const [searchInput, setSearchInput] = useState('');
   const [selectedType, setSelectedType] = useState('All');
 
+  const isDarkMode = theme === 'dark';
   const ref = useRef<BottomSheet>(null);
   const snapPoints = useMemo(() => ['50%'], []);
   const renderBackdrop = useCallback(
@@ -45,7 +51,7 @@ export default function Home() {
 
   const onClearFilters = () => {
     setMinPrice(0);
-    setMaxPrice(8500000);
+    setMaxPrice(50000);
     onBottomSheetClose();
   };
 
@@ -75,7 +81,7 @@ export default function Home() {
     let count = 0;
 
     if (minPrice > 0) count += 1;
-    if (maxPrice < 8500000) count += 1;
+    if (maxPrice < 50000) count += 1;
 
     return count;
   }, [minPrice, maxPrice]);
@@ -106,33 +112,42 @@ export default function Home() {
         snapPoints={snapPoints}
         enablePanDownToClose
         backdropComponent={renderBackdrop}
+        handleStyle={{
+          borderTopLeftRadius: 14,
+          borderTopRightRadius: 14,
+          backgroundColor: isDarkMode ? '#1E1E1E' : '#F1F2F4',
+        }}
+        handleIndicatorStyle={{
+          borderRadius: 100,
+          backgroundColor: isDarkMode ? 'white' : 'black',
+        }}
       >
-        <BottomSheetView className="h-full px-4 relative">
-          <View className="flex-row items-center justify-between pb-4 border-b border-border">
-            <Text className="text-xl font-medium">Filter</Text>
+        <BottomSheetView className="h-full px-4 bg-secondary-100 dark:bg-accent-200 relative">
+          <View className="flex-row items-center justify-between pb-4 border-b border-dashed border-secondary-200">
+            <Title title="Filter" />
             <TouchableOpacity onPress={onBottomSheetClose}>
-              <Text>Cancel</Text>
+              <Text className="text-black dark:text-white">Cancel</Text>
             </TouchableOpacity>
           </View>
 
           <Label title="Price range" className="mt-4" />
           <Grid columns={2} spacing={8}>
             <View>
-              <Label title="Min" className="text-mutedForeground" />
+              <Label title="Min" className="text-secondary-200" />
               <TextInput
                 keyboardType="numeric"
                 value={String(minPrice)}
                 onChangeText={(text) => setMinPrice(Number(text) || 0)}
-                className="border border-border rounded-xl"
+                className="px-4 bg-white dark:bg-neutral-800 rounded-xl text-black dark:text-white"
               />
             </View>
             <View>
-              <Label title="Max" className="text-mutedForeground" />
+              <Label title="Max" className="text-secondary-200" />
               <TextInput
                 keyboardType="numeric"
                 value={String(maxPrice)}
                 onChangeText={(text) => setMaxPrice(Number(text) || 0)}
-                className="border border-border rounded-xl"
+                className="px-4 bg-white dark:bg-neutral-800 rounded-xl text-black dark:text-white"
               />
             </View>
           </Grid>
@@ -141,7 +156,9 @@ export default function Home() {
               onPress={onClearFilters}
               className="absolute bottom-4 right-4"
             >
-              <Text>Clear all filter ({filterCount})</Text>
+              <Text className="text-black dark:text-white">
+                Clear all filter ({filterCount})
+              </Text>
             </TouchableOpacity>
           )}
         </BottomSheetView>
