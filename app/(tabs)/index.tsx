@@ -81,26 +81,24 @@ export default function Home() {
   }, [minPrice, maxPrice]);
 
   return (
-    <View className="flex-1">
-      <Container className="gap-y-4">
-        <View className="flex-row gap-x-2">
-          <SearchBar value={searchInput} onChange={setSearchInput} />
-          <TouchableOpacity
-            onPress={onBottomSheetOpen}
-            className="size-11 flex items-center justify-center bg-background rounded-xl"
-          >
-            <Ionicons name="funnel-outline" size={20} color="black" />
-          </TouchableOpacity>
-        </View>
+    <Container className="gap-y-4">
+      <View className="flex-row gap-x-2 mt-4">
+        <SearchBar value={searchInput} onChange={setSearchInput} />
+        <TouchableOpacity
+          onPress={onBottomSheetOpen}
+          className="size-11 flex items-center justify-center bg-blue-400 rounded-xl"
+        >
+          <Ionicons name="funnel-outline" size={20} color="white" />
+        </TouchableOpacity>
+      </View>
 
-        <PropertyTypes
-          data={properties}
-          selectedType={selectedType}
-          setSelectedType={setSelectedType}
-        />
+      <PropertyTypes
+        data={properties}
+        selectedType={selectedType}
+        setSelectedType={setSelectedType}
+      />
 
-        <PropertyList data={filteredProperties} />
-      </Container>
+      <PropertyList data={filteredProperties} />
 
       <BottomSheet
         ref={ref}
@@ -148,6 +146,6 @@ export default function Home() {
           )}
         </BottomSheetView>
       </BottomSheet>
-    </View>
+    </Container>
   );
 }

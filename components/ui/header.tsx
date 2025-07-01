@@ -9,7 +9,7 @@ type Props = {
 
 export const Header = ({ title }: Props) => {
   return (
-    <View className="flex-row items-center gap-x-8 mb-4">
+    <View className="py-4 flex-row items-center gap-x-8">
       <TouchableOpacity onPress={() => router.back()}>
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>

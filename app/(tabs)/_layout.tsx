@@ -1,24 +1,23 @@
 import { Tabs } from 'expo-router';
 import { Platform } from 'react-native';
 
-import { colors } from '@/constants/colors';
-
 import { HapticTab } from '@/components/haptic-tab';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useFavorites } from '@/hooks/use-favorites';
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
   const { favorites } = useFavorites();
 
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: colors[colorScheme ?? 'light'].tint,
         headerShown: false,
         tabBarButton: HapticTab,
+        tabBarActiveTintColor: '#60a5fa',
+        tabBarInactiveTintColor: '#808080',
+        tabBarHideOnKeyboard: true,
+        animation: 'shift',
         tabBarStyle: Platform.select({
           ios: {
             position: 'absolute',

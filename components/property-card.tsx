@@ -31,8 +31,8 @@ export const PropertyCard = ({ data }: Props) => {
       }}
       asChild
     >
-      <TouchableOpacity className="gap-y-2 relative">
-        <Image src={data.image} className="w-full aspect-video rounded-xl" />
+      <TouchableOpacity className="bg-white dark:bg-accent-default rounded-xl relative mb-4">
+        <Image src={data.image} className="w-full aspect-video rounded-t-xl" />
 
         <TouchableOpacity
           onPress={toggleFavorite}
@@ -45,12 +45,14 @@ export const PropertyCard = ({ data }: Props) => {
           )}
         </TouchableOpacity>
 
-        <View className="flex flex-row justify-between">
+        <View className="p-4 flex flex-row justify-between">
           <View>
-            <Text className="text-lg font-bold">{data.title}</Text>
-            <Text className="text-mutedForeground">{data.location}</Text>
+            <Text className="font-bold text-black dark:text-white">
+              {data.title}
+            </Text>
+            <Text className="text-secondary-200">{data.location}</Text>
           </View>
-          <Text className="text-lg font-bold text-orange-500">
+          <Text className="font-bold text-blue-400">
             ₱{data.price.toLocaleString()}
           </Text>
         </View>

@@ -23,16 +23,20 @@ export const PropertyTypes = ({
       {['All', ...types].map((item) => {
         const isSelected = item === selectedType;
 
+        const backgroundColor = isSelected
+          ? 'bg-blue-400'
+          : 'bg-secondary-default dark:bg-accent-default';
+        const textColor = isSelected
+          ? 'text-white font-medium'
+          : 'text-secondary-200';
+
         return (
           <TouchableOpacity
             key={item}
             onPress={() => setSelectedType(item ?? '')}
-            className={cn(
-              'py-1 px-3 mr-4 rounded-full',
-              isSelected ? 'bg-orange-500' : 'bg-background'
-            )}
+            className={cn('py-2 px-3 mr-4 rounded-full', backgroundColor)}
           >
-            <Text>{item}</Text>
+            <Text className={textColor}>{item}</Text>
           </TouchableOpacity>
         );
       })}

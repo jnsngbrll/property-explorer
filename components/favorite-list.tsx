@@ -13,6 +13,7 @@ export const FavoriteList = ({ data }: Props) => {
     <FlatList
       data={data}
       renderItem={({ item }) => <PropertyCard key={item.id} data={item} />}
+      showsVerticalScrollIndicator={false}
       ItemSeparatorComponent={() => <View className="h-8" />}
     />
   );
