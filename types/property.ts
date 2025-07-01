@@ -8,5 +8,4 @@ export type tProperty = {
   address?: string;
   amenities?: string[];
   image: string;
-  isFavorite: boolean;
 };

@@ -9,8 +9,8 @@ export const properties = [
       'A beautiful modern house with three bedrooms, two bathrooms, and a spacious garage.',
     address: '123 Ayala Ave, Makati, Metro Manila',
     amenities: ['Garage', 'Swimming Pool', 'Garden'],
-    image: 'https://example.com/images/property1.jpg',
-    isFavorite: true,
+    image:
+      'https://a0.muscache.com/im/pictures/miso/Hosting-1047032175710730595/original/f1e6fa1e-ede7-43f5-86de-83ca5b8fdd47.jpeg?im_w=1200',
   },
   {
     id: '2',
@@ -22,8 +22,8 @@ export const properties = [
       'A stylish one-bedroom condo with a great city view, perfect for young professionals.',
     address: '456 High Street, BGC, Taguig',
     amenities: ['Gym', '24/7 Security', 'Swimming Pool'],
-    image: 'https://example.com/images/property2.jpg',
-    isFavorite: false,
+    image:
+      'https://a0.muscache.com/im/pictures/miso/Hosting-1047032175710730595/original/f1e6fa1e-ede7-43f5-86de-83ca5b8fdd47.jpeg?im_w=1200',
   },
   {
     id: '3',
@@ -35,8 +35,8 @@ export const properties = [
       'An affordable apartment with two bedrooms, ideal for small families.',
     address: '789 EDSA, Quezon City',
     amenities: ['Parking', '24/7 Security'],
-    image: 'https://example.com/images/property3.jpg',
-    isFavorite: true,
+    image:
+      'https://a0.muscache.com/im/pictures/miso/Hosting-1047032175710730595/original/f1e6fa1e-ede7-43f5-86de-83ca5b8fdd47.jpeg?im_w=1200',
   },
   {
     id: '4',
@@ -48,8 +48,8 @@ export const properties = [
       'A beautiful modern house with three bedrooms, two bathrooms, and a spacious garage.',
     address: '123 Ayala Ave, Makati, Metro Manila',
     amenities: ['Garage', 'Swimming Pool', 'Garden'],
-    image: 'https://example.com/images/property1.jpg',
-    isFavorite: false,
+    image:
+      'https://a0.muscache.com/im/pictures/miso/Hosting-1047032175710730595/original/f1e6fa1e-ede7-43f5-86de-83ca5b8fdd47.jpeg?im_w=1200',
   },
   {
     id: '5',
@@ -61,8 +61,8 @@ export const properties = [
       'A stylish one-bedroom condo with a great city view, perfect for young professionals.',
     address: '456 High Street, BGC, Taguig',
     amenities: ['Gym', '24/7 Security', 'Swimming Pool'],
-    image: 'https://example.com/images/property2.jpg',
-    isFavorite: true,
+    image:
+      'https://a0.muscache.com/im/pictures/miso/Hosting-1047032175710730595/original/f1e6fa1e-ede7-43f5-86de-83ca5b8fdd47.jpeg?im_w=1200',
   },
   {
     id: '6',
@@ -74,7 +74,7 @@ export const properties = [
       'An affordable apartment with two bedrooms, ideal for small families.',
     address: '789 EDSA, Quezon City',
     amenities: ['Parking', '24/7 Security'],
-    image: 'https://example.com/images/property3.jpg',
-    isFavorite: false,
+    image:
+      'https://a0.muscache.com/im/pictures/miso/Hosting-1047032175710730595/original/f1e6fa1e-ede7-43f5-86de-83ca5b8fdd47.jpeg?im_w=1200',
   },
 ];

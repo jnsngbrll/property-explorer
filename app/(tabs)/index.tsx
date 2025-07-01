@@ -2,10 +2,10 @@ import { useMemo, useState } from 'react';
 
 import { properties } from '@/constants/properties';
 
-import { Container } from '@/components/container';
 import { PropertyList } from '@/components/property-list';
 import { PropertyTypes } from '@/components/property-types';
 import { SearchBar } from '@/components/search-bar';
+import { Container } from '@/components/ui/container';
 
 export default function Home() {
   const [searchInput, setSearchInput] = useState('');
