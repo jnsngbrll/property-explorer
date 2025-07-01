@@ -1,9 +1,9 @@
 import { ScrollView, Text, TouchableOpacity } from 'react-native';
 
+import { cn } from '@/lib/utils';
 import type { tProperty } from '@/types/property';
 
 import { getPropertyTypes } from '@/actions/get-property-types';
-import { cn } from '@/lib/utils';
 
 type Props = {
   data: tProperty[];
@@ -24,7 +24,7 @@ export const PropertyTypes = ({
         const isSelected = item === selectedType;
 
         const backgroundColor = isSelected
-          ? 'bg-blue-400'
+          ? 'bg-blue-500'
           : 'bg-secondary-default dark:bg-accent-default';
         const textColor = isSelected
           ? 'text-white font-medium'

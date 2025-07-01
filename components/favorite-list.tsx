@@ -1,4 +1,4 @@
-import { FlatList, View } from 'react-native';
+import { FlatList } from 'react-native';
 
 import type { tProperty } from '@/types/property';
 
@@ -14,7 +14,6 @@ export const FavoriteList = ({ data }: Props) => {
       data={data}
       renderItem={({ item }) => <PropertyCard key={item.id} data={item} />}
       showsVerticalScrollIndicator={false}
-      ItemSeparatorComponent={() => <View className="h-8" />}
     />
   );
 };

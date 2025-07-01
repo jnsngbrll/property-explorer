@@ -47,12 +47,12 @@ export const PropertyCard = ({ data }: Props) => {
 
         <View className="p-4 flex flex-row justify-between">
           <View>
-            <Text className="font-bold text-black dark:text-white">
+            <Text className="font-medium text-black dark:text-white">
               {data.title}
             </Text>
             <Text className="text-secondary-200">{data.location}</Text>
           </View>
-          <Text className="font-bold text-blue-400">
+          <Text className="font-bold text-blue-500 underline underline-offset-4">
             ₱{data.price.toLocaleString()}
           </Text>
         </View>

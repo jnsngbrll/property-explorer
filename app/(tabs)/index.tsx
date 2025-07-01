@@ -86,7 +86,7 @@ export default function Home() {
         <SearchBar value={searchInput} onChange={setSearchInput} />
         <TouchableOpacity
           onPress={onBottomSheetOpen}
-          className="size-11 flex items-center justify-center bg-blue-400 rounded-xl"
+          className="size-11 flex items-center justify-center bg-blue-500 rounded-xl"
         >
           <Ionicons name="funnel-outline" size={20} color="white" />
         </TouchableOpacity>
