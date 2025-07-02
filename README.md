@@ -1,50 +1,111 @@
-# Welcome to your Expo app 👋
+# 📱 Property Explorer
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Property Explorer is a mobile app that allows users to browse, search, filter, and favorite properties. The app provides a smooth and responsive experience using React Native and modern UI libraries.
 
-## Get started
+👉 **GitHub Repository:** [https://github.com/jnsngbrll/property-explorer](https://github.com/jnsngbrll/property-explorer)
 
-1. Install dependencies
+---
 
+## 🚀 Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jnsngbrll/property-explorer.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd property-explorer
+   ```
+3. Install all dependencies:
    ```bash
    npm install
    ```
-
-2. Start the app
-
+4. Start the Expo server:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🛠️ App Structure & Tech Choices
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 📦 Folder Structure
 
-## Get a fresh project
+- `/actions` – Reusable functions
+- `/app` – App screens and layouts (Home, Property Details, Favorites, Profile, Settings)
+- `/assets` – Images and static files
+- `/components` – Reusable components like PropertyCard, FilterBottomSheet, EmptyList
+- `/constants` – Static data (property listings)
+- `/hooks` – Custom hooks (e.g., useFavorites)
+- `/lib` – Utils
+- `/styles` – Global styles
+- `/types` – TypeScript type definitions
 
-When you're ready, run:
+### 🧰 Tech Stack
 
-```bash
-npm run reset-project
-```
+- **TypeScript** – Type-safe development
+- **React Native (Expo)** – Mobile development framework
+- **NativeWind (Tailwind CSS for React Native)** – Fast, responsive styling
+- **AsyncStorage** – Local state persistence (theme & favorites)
+- **@gorhom/bottom-sheet** – Smooth bottom sheet for filters
+- **React Navigation** – Bottom tab navigation
+- **react-native-reanimated** – Smooth animations for images and transitions
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## ⚙️ Limitations & Assumptions
 
-To learn more about developing your project with Expo, look at the following resources:
+- **Static Data:** Property listings are hardcoded. In a full app, these would be fetched from a backend API.
+- **No Authentication:** User login, profiles, and sessions are not yet implemented.
+- **Filtering:** Current filtering is basic. It supports property type, price range, guest count, bed count, and bath count. More advanced filters like multi-select and sliders can be added.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+---
 
-## Join the community
+## ✅ Features Completed
 
-Join our community of developers creating universal apps.
+- Property listing with responsive cards
+- Search properties by title and location
+- Filtering properties by:
+  - Property type
+  - Price range
+  - Guest count
+  - Bed count
+  - Bath count
+- Bottom sheet for filter management
+- "Clear All Filters" button
+- Add and remove properties from favorites
+- View favorite properties on a separate tab
+- Smooth animations using `react-native-reanimated` (image fade-in, screen transitions)
+- Empty state handling for both properties and favorites
+- Dark mode support
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 🚀 Improvements With More Time
+
+- Connect to a live API for real-time property data
+- Implement user authentication and profile management
+- Add advanced filtering features (multi-select, sliders, location-based filters)
+- Support multiple images per property
+- Improve app performance and loading states
+- Optimize code structure and reusable logic
+- Enhance the UI with additional polish and consistency
+- Add persistent storage for offline favorites using local databases
+- Improve folder structure for larger scale development
+
+---
+
+## 📚 Summary of Technical Exam Requirements
+
+| Feature                                                 | Status       |
+| ------------------------------------------------------- | ------------ |
+| Property list with image, title, location, price        | ✅ Completed |
+| Infinite scroll or pagination                           | ✅ Completed |
+| Search and filter by name, location, price, type        | ✅ Completed |
+| Filter bottom sheet                                     | ✅ Completed |
+| Property detail screen with large image and description | ✅ Completed |
+| Favorite properties management (syncs across screens)   | ✅ Completed |
+| Separate Favorites tab                                  | ✅ Completed |
+| Bottom tab navigation (Home, Favorites, Profile)        | ✅ Completed |
+| Smooth animations                                       | ✅ Completed |
+| Dark mode                                               | ✅ Completed |
