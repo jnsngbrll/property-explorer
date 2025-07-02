@@ -1,14 +1,15 @@
 import BottomSheet from '@gorhom/bottom-sheet';
 import { useMemo, useRef, useState } from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { FlatList, TouchableOpacity, View } from 'react-native';
 
 import { properties } from '@/constants/properties';
 
 import { FiltersBottomSheet } from '@/components/filters-bottom-sheet';
-import { PropertyList } from '@/components/property-list';
+import { PropertyCard } from '@/components/property-card';
 import { PropertyTypes } from '@/components/property-types';
 import { SearchBar } from '@/components/search-bar';
 import { Container } from '@/components/ui/container';
+import { EmptyList } from '@/components/ui/empty-list';
 
 import { useTheme } from '@/hooks/use-theme';
 
@@ -38,6 +39,8 @@ export default function Home() {
   const onBottomSheetClose = () => ref.current?.close();
 
   const onClearFilters = () => {
+    setSearchInput('');
+    setSelectedType('All');
     setFilters({
       minPrice: 0,
       maxPrice: 50000,
@@ -110,7 +113,19 @@ export default function Home() {
         setSelectedType={setSelectedType}
       />
 
-      <PropertyList data={filteredProperties} />
+      <FlatList
+        data={filteredProperties}
+        renderItem={({ item }) => <PropertyCard key={item.id} data={item} />}
+        showsVerticalScrollIndicator={false}
+        ListEmptyComponent={() => (
+          <EmptyList
+            description="No properties match your search."
+            buttonTitle="Clear all filter"
+            onPress={onClearFilters}
+          />
+        )}
+        className="h-full"
+      />
 
       <FiltersBottomSheet
         ref={ref}
