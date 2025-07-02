@@ -1,5 +1,6 @@
+import { Image } from 'expo-image';
 import { router, useLocalSearchParams } from 'expo-router';
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 
 import { getAminityIcon } from '@/actions/get-amenity-icon';
 import { getProperty } from '@/actions/get-property';
@@ -69,8 +70,14 @@ export default function DetailScreen() {
         contentContainerStyle={{ paddingBottom: 80 }}
       >
         <Image
-          src={data.image}
-          className="w-full aspect-square rounded-b-3xl"
+          source={data.image}
+          transition={500}
+          style={{
+            width: '100%',
+            height: 350,
+            borderTopLeftRadius: 12,
+            borderTopRightRadius: 12,
+          }}
         />
 
         <TouchableOpacity

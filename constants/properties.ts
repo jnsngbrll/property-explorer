@@ -11,8 +11,7 @@ export const properties: tProperty[] = [
       'A beautiful modern house with three bedrooms, two bathrooms, and a spacious garage.',
     address: '123 Ayala Ave, Makati, Metro Manila',
     amenities: ['Garage', 'Swimming Pool', 'Garden'],
-    image:
-      'https://i.pinimg.com/736x/ba/8c/2f/ba8c2f7b346d88cda8c30e7d828a4169.jpg',
+    image: require('@/assets/images/properties/1.jpg'),
     guestCount: 2,
     bedCount: 3,
     bathCount: 2,
@@ -27,8 +26,7 @@ export const properties: tProperty[] = [
       'A stylish one-bedroom condo with a great city view, perfect for young professionals.',
     address: '456 High Street, BGC, Taguig',
     amenities: ['Gym', 'Security', 'Swimming Pool'],
-    image:
-      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/483890792.jpg?k=bd5a7feb5d3e112d9d0b925b2bbae07b915898939ec50cb6dc52e9adda8fab17&o=&hp=1',
+    image: require('@/assets/images/properties/2.jpg'),
     guestCount: 4,
     bedCount: 2,
     bathCount: 1,
@@ -43,8 +41,7 @@ export const properties: tProperty[] = [
       'An affordable apartment with two bedrooms, ideal for small families.',
     address: '789 EDSA, Quezon City',
     amenities: ['Parking', 'Security'],
-    image:
-      'https://bcdn.renthub.in.th/listing_picture/201807/20180726/4x76kPHM2tc5AvR63Nyb.jpg?class=lthumbnail',
+    image: require('@/assets/images/properties/3.jpg'),
     guestCount: 2,
     bedCount: 1,
     bathCount: 1,
@@ -59,8 +56,7 @@ export const properties: tProperty[] = [
       'A high-end penthouse with a 360-degree view of the Metro Manila skyline.',
     address: '88 Emerald Ave, Ortigas, Pasig',
     amenities: ['Private Elevator', 'Rooftop Pool', 'Gym'],
-    image:
-      'https://img.jamesedition.com/listing_images/2024/05/07/15/56/41/cf11e2d1-83de-42d5-8486-f7359271a145/je/1100xxs.jpg',
+    image: require('@/assets/images/properties/4.jpg'),
     guestCount: 6,
     bedCount: 3,
     bathCount: 2,
@@ -75,8 +71,7 @@ export const properties: tProperty[] = [
       'A small but convenient studio near public transport and shopping centers.',
     address: '500 Boni Ave, Mandaluyong',
     amenities: ['Elevator', 'Security'],
-    image:
-      'https://static.dezeen.com/uploads/2021/05/Montreal-loft-renovation-by-future-simple-studio-interiors-canada-hero.jpg',
+    image: require('@/assets/images/properties/5.jpg'),
     guestCount: 2,
     bedCount: 1,
     bathCount: 1,
@@ -91,8 +86,7 @@ export const properties: tProperty[] = [
       'A stunning beachfront house perfect for weekend getaways and family vacations.',
     address: 'Seaside Blvd, Nasugbu, Batangas',
     amenities: ['Beach Access', 'Swimming Pool', 'Garden'],
-    image:
-      'https://a0.muscache.com/im/pictures/miso/Hosting-1235933472732199419/original/878f7772-dc8b-4c32-8e3d-2f949cf38dec.jpeg',
+    image: require('@/assets/images/properties/6.jpg'),
     guestCount: 8,
     bedCount: 4,
     bathCount: 3,
@@ -107,8 +101,7 @@ export const properties: tProperty[] = [
       'A perfect family home with a wide backyard for outdoor activities.',
     address: 'Hilltop Drive, Antipolo, Rizal',
     amenities: ['Garage', 'Garden', 'Balcony'],
-    image:
-      'https://media.istockphoto.com/id/1448381453/photo/a-large-gray-craftsman-new-construction-house-with-a-landscaped-yard-and-leading-pathway.jpg?s=612x612&w=0&k=20&c=72x3DmnGF3Db6BvGh4M6khD_hKrrCRiRSq76XqhUZYI=',
+    image: require('@/assets/images/properties/7.jpg'),
     guestCount: 6,
     bedCount: 3,
     bathCount: 2,
@@ -123,8 +116,7 @@ export const properties: tProperty[] = [
       'A stylish loft-type condo unit within walking distance to Greenbelt Mall.',
     address: 'Paseo de Roxas, Makati',
     amenities: ['Gym', 'Swimming Pool', 'Sky Lounge'],
-    image:
-      'https://a0.muscache.com/im/pictures/miso/Hosting-814270408056913718/original/98d6e343-7007-4a92-8494-646fbf0aba0f.jpeg?im_w=720',
+    image: require('@/assets/images/properties/8.jpg'),
     guestCount: 4,
     bedCount: 2,
     bathCount: 1,
@@ -139,8 +131,7 @@ export const properties: tProperty[] = [
       'A fully furnished condo ideal for young professionals and investors.',
     address: 'Cebu IT Park, Lahug, Cebu City',
     amenities: ['Gym', 'Security', 'Swimming Pool'],
-    image:
-      'https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzAxOTY5ZjVlLWJlZTEtN2JiYi1hMjUzLTAxOTc3MTk3ZmI1NC8wMTk2OWY2OS04NWI1LTcyMGEtYmEyOS02NDU5NjViOTg3MjIuanBnIiwiYnJhbmQiOiJkb3Rwcm9wZXJ0eSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo0OTAsImhlaWdodCI6MzI1LCJmaXQiOiJjb3ZlciJ9fX0=',
+    image: require('@/assets/images/properties/9.jpg'),
     guestCount: 2,
     bedCount: 1,
     bathCount: 1,
@@ -154,8 +145,7 @@ export const properties: tProperty[] = [
     description: 'A newly renovated elegant house perfect for large families.',
     address: 'Commonwealth Ave, Quezon City',
     amenities: ['Garage', 'Garden', 'Balcony'],
-    image:
-      'https://realty.presello.com/hs-fs/hubfs/IMG_7401-scaled-jpg.jpeg?width=2560&height=1920&name=IMG_7401-scaled-jpg.jpeg',
+    image: require('@/assets/images/properties/10.jpg'),
     guestCount: 8,
     bedCount: 4,
     bathCount: 3,
@@ -170,8 +160,7 @@ export const properties: tProperty[] = [
       'Affordable studio condo in the heart of Davao City, perfect for students or starting professionals.',
     address: 'JP Laurel Ave, Davao City',
     amenities: ['Security', 'Gym', 'Swimming Pool'],
-    image:
-      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/514945837.jpg?k=3ad9564a978b7008473428edb6a4e87f78a14af3d67dfbc40492fcd83d4894d9&o=&hp=1',
+    image: require('@/assets/images/properties/1.jpg'),
     guestCount: 2,
     bedCount: 1,
     bathCount: 1,
@@ -186,8 +175,7 @@ export const properties: tProperty[] = [
       'A stunning resort-style villa with a private pool and view of Taal Lake.',
     address: 'Tagaytay-Nasugbu Hwy, Tagaytay',
     amenities: ['Private Pool', 'Garden', 'Garage'],
-    image:
-      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/458566534.jpg?k=0b728323a5794f12a3b2e8ebfef09cf1230bbf000bcd7607b2a585e291bce547&o=&hp=1',
+    image: require('@/assets/images/properties/2.jpg'),
     guestCount: 10,
     bedCount: 5,
     bathCount: 4,
@@ -202,8 +190,7 @@ export const properties: tProperty[] = [
       'A minimalist one-bedroom condo perfect for singles or couples.',
     address: 'Filinvest, Alabang, Muntinlupa',
     amenities: ['Swimming Pool', 'Gym', 'Sky Lounge'],
-    image:
-      'https://a0.muscache.com/im/pictures/miso/Hosting-957052247362173845/original/ffce9ae2-c5ea-4dcd-8625-deb321ccb005.jpeg?im_w=720',
+    image: require('@/assets/images/properties/3.jpg'),
     guestCount: 2,
     bedCount: 1,
     bathCount: 1,
@@ -218,8 +205,7 @@ export const properties: tProperty[] = [
       'A compact apartment near Araneta Center, ideal for working professionals.',
     address: 'P. Tuazon Blvd, Cubao, Quezon City',
     amenities: ['Security', 'Parking'],
-    image:
-      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/483890792.jpg?k=bd5a7feb5d3e112d9d0b925b2bbae07b915898939ec50cb6dc52e9adda8fab17&o=&hp=1',
+    image: require('@/assets/images/properties/4.jpg'),
     guestCount: 3,
     bedCount: 1,
     bathCount: 1,
@@ -234,8 +220,7 @@ export const properties: tProperty[] = [
       'A beachside condo unit with easy access to the shore and recreational areas.',
     address: 'Waterfront Road, Subic Bay',
     amenities: ['Swimming Pool', 'Beach Access', 'Gym'],
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKT1OeE-tyrqmqSj_NAbxFsfso6y3gBge_FQ&s',
+    image: require('@/assets/images/properties/5.jpg'),
     guestCount: 4,
     bedCount: 2,
     bathCount: 2,
@@ -249,8 +234,7 @@ export const properties: tProperty[] = [
     description: 'A cozy townhouse perfect for starter families.',
     address: 'C. Raymundo Ave, Pasig City',
     amenities: ['Garage', 'Security'],
-    image:
-      'https://www.preselling.com.ph/wp-content/uploads/2017/02/Ametta-Place-Pasig.jpg',
+    image: require('@/assets/images/properties/6.jpg'),
     guestCount: 5,
     bedCount: 3,
     bathCount: 2,
@@ -265,8 +249,7 @@ export const properties: tProperty[] = [
       'A condo unit with direct garden access, perfect for relaxation.',
     address: 'Marcos Highway, Marikina City',
     amenities: ['Garden Access', 'Swimming Pool', 'Gym'],
-    image:
-      'https://tropicanagardencity.files.wordpress.com/2011/01/building-facade-61.jpg',
+    image: require('@/assets/images/properties/7.jpg'),
     guestCount: 4,
     bedCount: 2,
     bathCount: 1,
@@ -280,8 +263,7 @@ export const properties: tProperty[] = [
     description: 'A mountain view house with a fireplace and cozy ambiance.',
     address: 'Mines View Park, Baguio City',
     amenities: ['Fireplace', 'Garage', 'Balcony'],
-    image:
-      'https://media.philstar.com/images/the-philippine-star/business/business-main/20180119/RE1.jpg',
+    image: require('@/assets/images/properties/8.jpg'),
     guestCount: 6,
     bedCount: 3,
     bathCount: 2,
@@ -296,8 +278,7 @@ export const properties: tProperty[] = [
       'A lovely riverside house with wide open spaces and fresh air.',
     address: 'Riverside Drive, San Fernando, Pampanga',
     amenities: ['Garage', 'Garden', 'Balcony'],
-    image:
-      'https://pueblodeoro.com/wp-content/uploads/2020/10/4-Properties-In-Pampanga-You-Need-To-Know-About-1024x682.jpg',
+    image: require('@/assets/images/properties/9.jpg'),
     guestCount: 6,
     bedCount: 3,
     bathCount: 2,
@@ -312,8 +293,7 @@ export const properties: tProperty[] = [
       'A high-rise condo with a panoramic view of Manila Bay sunset.',
     address: 'Roxas Blvd, Manila City',
     amenities: ['Swimming Pool', 'Sky Lounge', 'Gym'],
-    image:
-      'https://anchorland.com.ph/wp-content/uploads/2019/08/image_2024_09_13T03_14_40_291Z.png',
+    image: require('@/assets/images/properties/10.jpg'),
     guestCount: 4,
     bedCount: 2,
     bathCount: 2,
@@ -328,8 +308,7 @@ export const properties: tProperty[] = [
       'A peaceful farm lot perfect for organic farming or a weekend retreat with fresh air and mountain views.',
     address: 'Tagaytay Highlands, Cavite',
     amenities: ['Wide Lot', 'Fruit Trees', 'Water Supply'],
-    image:
-      'https://www.goldensphere.com.ph/wp-content/uploads/2024/03/PALIGAWAN-12-1170x785.webp',
+    image: require('@/assets/images/properties/1.jpg'),
     guestCount: 10,
     bedCount: 0,
     bathCount: 0,
@@ -344,8 +323,7 @@ export const properties: tProperty[] = [
       'A modern office space in Ortigas with high-speed elevators, 24/7 security, and a great view of the city skyline.',
     address: 'Ortigas Center, Pasig City',
     amenities: ['High-Speed Elevator', 'Backup Generator', 'Parking'],
-    image:
-      'https://chicagoofficemovers.com/wp-content/uploads/2022/06/modern-office-interior-reduced.jpg',
+    image: require('@/assets/images/properties/2.jpg'),
     guestCount: 20,
     bedCount: 0,
     bathCount: 2,
@@ -360,8 +338,7 @@ export const properties: tProperty[] = [
       'Ideal for retail businesses, this commercial space is located in the heart of Divisoria with heavy foot traffic.',
     address: 'Sto. Cristo St, Divisoria, Manila',
     amenities: ['Wide Entrance', 'Storage Area', 'Parking'],
-    image:
-      'https://s3-ap-southeast-1.amazonaws.com/filipinohomes/members/384/listings/23841454/234843696.330786023_1633156040440415_3892755710110348441_n.jpg',
+    image: require('@/assets/images/properties/3.jpg'),
     guestCount: 15,
     bedCount: 0,
     bathCount: 1,
@@ -376,8 +353,7 @@ export const properties: tProperty[] = [
       'Spacious warehouse suitable for logistics, manufacturing, or storage with high ceiling and large truck access.',
     address: 'McArthur Highway, Valenzuela City',
     amenities: ['High Ceiling', 'Truck Bay', 'Security Gate'],
-    image:
-      'https://pix.dotproperty.co.th/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci8wMTk3NjNlZC0zNjZjLTcxOGEtYjNhOS05Y2E3ODA2ODIyY2YvZDQ1MWZmODhjZmUwM2E4NTA4NDYyMzE5YzY0ZDhjZjQyMmRiZTQwNmM5NTU5N2I4YTEwNTUxMjI0MGIyNzFmMS5qcGVnIiwiYnJhbmQiOiJkb3Rwcm9wZXJ0eSIsImVkaXRzIjp7InJvdGF0ZSI6bnVsbCwicmVzaXplIjp7IndpZHRoIjo0OTAsImhlaWdodCI6MzI1LCJmaXQiOiJjb3ZlciJ9fX0=',
+    image: require('@/assets/images/properties/4.jpg'),
     guestCount: 50,
     bedCount: 0,
     bathCount: 2,
@@ -392,8 +368,7 @@ export const properties: tProperty[] = [
       'A charming lakeside cottage perfect for family vacations, with serene views and a relaxing atmosphere.',
     address: 'Lake Caliraya, Laguna',
     amenities: ['Lake Access', 'Private Dock', 'Garden'],
-    image:
-      'https://freshwatervacationrentals.com/wp-content/uploads/2018/10/Little-Lake-Cottage-in-Gwinn-1280x630.jpeg',
+    image: require('@/assets/images/properties/5.jpg'),
     guestCount: 8,
     bedCount: 3,
     bathCount: 2,
@@ -408,8 +383,7 @@ export const properties: tProperty[] = [
       'Luxurious penthouse loft with stunning city views, rooftop access, and top-notch amenities.',
     address: 'Cebu IT Park, Lahug, Cebu City',
     amenities: ['Rooftop Deck', 'Swimming Pool', 'Gym'],
-    image:
-      'https://a0.muscache.com/im/pictures/miso/Hosting-882963845680135900/original/89aa94e0-4cf3-42b7-9cfa-6899755b9391.jpeg?im_w=720',
+    image: require('@/assets/images/properties/6.jpg'),
     guestCount: 6,
     bedCount: 3,
     bathCount: 3,
@@ -424,8 +398,7 @@ export const properties: tProperty[] = [
       'A cozy mountain cabin perfect for escaping city life and enjoying the cool Sagada breeze.',
     address: 'Echo Valley, Sagada, Mountain Province',
     amenities: ['Fireplace', 'Deck', 'Mountain Views'],
-    image:
-      'https://loveincorporated.blob.core.windows.net/contentimages/gallery/8a6c470c-264f-4da4-91f6-e56237337797-most-beautiful-remote-huts-wilderness-homes-cabin.jpg',
+    image: require('@/assets/images/properties/7.jpg'),
     guestCount: 4,
     bedCount: 2,
     bathCount: 1,
@@ -440,8 +413,7 @@ export const properties: tProperty[] = [
       'A compact office space perfect for startups or small businesses, located in the bustling Makati CBD.',
     address: 'Salcedo Village, Makati',
     amenities: ['Elevator Access', 'Parking', 'Security'],
-    image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTtvKMJDBmD9WmqAw4Y2lknZEfD2FBQARPGA&s',
+    image: require('@/assets/images/properties/8.jpg'),
     guestCount: 10,
     bedCount: 0,
     bathCount: 1,
@@ -456,8 +428,7 @@ export const properties: tProperty[] = [
       'A high-visibility retail space in Greenhills Shopping Center, perfect for boutiques or cafes.',
     address: 'Greenhills Shopping Center, San Juan City',
     amenities: ['Front Display Window', 'High Foot Traffic', 'Parking'],
-    image:
-      'https://images.real.ph/real/uploads/listings/large/listing_65a628a1eae4d942_1705388193.png',
+    image: require('@/assets/images/properties/9.jpg'),
     guestCount: 15,
     bedCount: 0,
     bathCount: 1,
@@ -472,8 +443,7 @@ export const properties: tProperty[] = [
       'A rare opportunity to own a private island with white sand beaches and clear blue waters in Palawan.',
     address: 'Coron, Palawan',
     amenities: ['Private Beach', 'Boat Access', 'Resort Potential'],
-    image:
-      'https://www.privateislandsonline.com/uploads/resize/_2551_63d83299e8b68.jpg-1074-822.jpg',
+    image: require('@/assets/images/properties/10.jpg'),
     guestCount: 20,
     bedCount: 0,
     bathCount: 0,
